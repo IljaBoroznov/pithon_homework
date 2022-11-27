@@ -5,3 +5,14 @@
 # ХЗ как это реализовать... литература не сильно помогла,  
 # если без понимания этого я дальше не смогу учиться, 
 # напишите решение пожалуйста)) 
+
+xp = [True, False]
+yp = [True, False]
+zp = [True, False]
+for x in xp:
+    for y in yp:
+        for z in zp:
+            print(x,y,z)
+            res1 = not(x or y or z)
+            res2 = (not x) and (not y) and (not z)
+            print(res1 == res2)
