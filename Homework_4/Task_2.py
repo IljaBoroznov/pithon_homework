@@ -17,4 +17,20 @@ def prime_factors(num):
         list.append(n)
     return list
 
-print(prime_factors(n))
+print(f'Список делителей числа {n} -> {prime_factors(n)}')
+
+
+def dividers(a: int, uniq: bool = False):
+    i = 2 
+    dividers = []
+    while a != 1:
+        while a % i == 0:
+            dividers.append(i)
+            a //= i
+        i += 1
+    if uniq:
+        return list(set(dividers))
+    else:
+        return dividers
+
+print(f'Список натуральных делителей числа {n}: {dividers(n, True)}')
