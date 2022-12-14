@@ -6,14 +6,15 @@
 
 print('Введите число N')
 n = int(input())
-lis = [i for i in range(1, n*2+2)] #создание списка от 1 до N
-a = - n
-for i in range(n*2+1):
-    lis[i] = a
-    a += 1
+lis = [i for i in range(0, n)] 
+from random import randint
+for i in lis:
+    lis[i] = randint(-n, n)
+def multi_pos_in_list(list, a, b):
+    return list[a] * list[b]
 print(lis)
 print('Введите номер позиции')
-first = int(input())
+a = int(input())
 print('Введите номер позиции')
-second = int(input())
-print(f'произведение равно {lis[first] * lis[second]}')
+b = int(input())
+print(multi_pos_in_list(lis, a, b))

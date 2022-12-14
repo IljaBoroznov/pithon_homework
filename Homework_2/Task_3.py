@@ -5,9 +5,7 @@
 
 print('Введите число N')
 n = int(input())
-lis = [i for i in range(1,n+1)] #создание списка от 1 до N
-a = 1
-for a in range(n):
-    lis[a] = (1+1/(a+1))**(a+1)
-print(lis)
-print(round(sum(lis), 3))
+a = lambda x: (1+1/(x+1))**(x+1)
+list = [a(i) for i in range(0, n)]
+print(list)
+print(round(sum(list), 3))
